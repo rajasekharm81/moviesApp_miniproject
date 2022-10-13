@@ -1,0 +1,121 @@
+@media screen and (min-width: 600px) {
+  .homeMainContainer {
+    background-color: #131313;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .CorosolContainer {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+  }
+
+  .corCont {
+    box-shadow: 0px 0px 31px 1px #4f4f4f;
+  }
+
+  .title {
+    font-size: 68px;
+  }
+
+  .treningCorosol {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottomContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trendingCorosolItem {
+    text-align: center;
+    height: 40vh;
+    width: 10vw;
+  }
+
+  .PosterImage {
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+  }
+
+  .Contentheadings {
+    align-self: flex-start;
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .homeMainContainer {
+    background-color: #131313;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .CorosolContainer {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    width: 100vw;
+    height: 30vh;
+    color: white;
+  }
+
+  .corCont {
+    box-shadow: 0px 0px 31px 1px #4f4f4f;
+  }
+
+  .title {
+    font-size: 68px;
+  }
+
+  .treningCorosol {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  .bottomContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .trendingCorosolItem {
+    text-align: center;
+    height: 15vh;
+    width: 15vw;
+  }
+
+  .PosterImage {
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    border-radius: 2vh;
+  }
+
+  .Contentheadings {
+    align-self: flex-start;
+    padding-left: 10%;
+  }
+}

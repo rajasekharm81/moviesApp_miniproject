@@ -1,0 +1,13 @@
+.FooterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  color: white;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.icons {
+  font-size: 32px;
+}

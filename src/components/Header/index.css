@@ -1,0 +1,97 @@
+@media screen and (min-width: 600px) {
+  .headerContainer {
+    width: 100%;
+    height: 15vh;
+    background-color: #0000003f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+
+  .hambergerIcon {
+    display: none;
+  }
+
+  .headerLogo {
+    height: 10vh;
+    width: 10vw;
+  }
+
+  .headerLogoContainer {
+    display: flex;
+    width: 30vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .avatarContainer {
+    display: flex;
+    width: 20vw;
+    align-items: center;
+  }
+
+  .magnifierIcon {
+    font-size: 3vw;
+  }
+
+  .avatarImage {
+    height: 80%;
+    width: 5vw;
+    background-color: white;
+    margin-left: 5vh;
+    border-radius: 500px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .headerContainer {
+    width: 100vw;
+    height: 10vh;
+    background-color: #0000007b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+  }
+
+  .lg {
+    display: none;
+  }
+
+  .headerLogo {
+    height: 5vh;
+    width: 30vw;
+  }
+
+  .headerLogoContainer {
+    display: flex;
+    width: 40vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .avatarContainer {
+    display: flex;
+    width: 20vw;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .magnifierIcon {
+    font-size: 3vw;
+  }
+
+  .avatarImage {
+    height: 60%;
+    width: 10vw;
+    background-color: white;
+    margin-left: 5vh;
+    border-radius: 500px;
+  }
+  .avatarImageContainer {
+    display: none;
+  }
+}

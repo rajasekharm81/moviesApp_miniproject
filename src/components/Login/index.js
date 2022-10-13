@@ -55,7 +55,12 @@ class Login extends Component {
       errorMsg !== '' ? <p className="errorMsg">{errorMsg}</p> : null
     return (
       <div className="LoginMainContainer">
-        <h1 className="LoginMoviesHeading">Movies</h1>
+        {/* <h1 className="LoginMoviesHeading">Movies</h1> */}
+        <img
+          alt="login website logo"
+          className="MoviesLogo"
+          src="https://res.cloudinary.com/dcqzidejd/image/upload/v1665642655/movies_logo_yx6msq.png"
+        />
         <form onSubmit={this.submitLogin} className="loginContainer">
           <h2>Login</h2>
           <label className="loginLabel" htmlFor="loginUsername">

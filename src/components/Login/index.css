@@ -53,6 +53,12 @@
     color: white;
     padding: 1.5vh;
   }
+  .MoviesLogo {
+    margin-top: 2vh;
+    height: 10%;
+    width: 15%;
+    margin-left: 2vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -109,6 +115,12 @@
     margin-top: 3vh;
     color: white;
     padding: 1.5vh;
+  }
+  .MoviesLogo {
+    margin-top: 2vh;
+    height: 10%;
+    width: 55%;
+    margin-left: 2vw;
   }
 }
 
