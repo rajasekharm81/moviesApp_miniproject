@@ -1,0 +1,54 @@
+.popularMainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .movie {
+    height: 30vh;
+    width: 30vh;
+    margin: 2vh;
+  }
+
+  .movieImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 2vh;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .movie {
+    height: 10vh;
+    width: 10vh;
+    margin: 1vh;
+  }
+
+  .movieImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 2vh;
+  }
+}

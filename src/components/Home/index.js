@@ -69,7 +69,7 @@ class Home extends Component {
         <div className="corCont">
           <Slider {...posters}>
             {results.map(each => (
-              <div>
+              <div key={each.id}>
                 <div
                   className="CorosolContainer"
                   style={{
@@ -90,7 +90,7 @@ class Home extends Component {
           <h1 className="Contentheadings">Trending</h1>
           <Slider className="treningCorosol" {...trending}>
             {topRatedMovies.map(each => (
-              <div className="trendingCorosolItem">
+              <div key={each.id} className="trendingCorosolItem">
                 <img
                   className="PosterImage"
                   src={each.poster_path}
@@ -102,7 +102,7 @@ class Home extends Component {
           <h1 className="Contentheadings">Originals</h1>
           <Slider className="treningCorosol" {...trending}>
             {originals.map(each => (
-              <div className="trendingCorosolItem">
+              <div key={each.id} className="trendingCorosolItem">
                 <img
                   className="PosterImage"
                   src={each.poster_path}
