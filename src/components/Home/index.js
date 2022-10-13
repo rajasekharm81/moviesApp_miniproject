@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import Slider from 'react-slick'
@@ -61,9 +62,8 @@ class Home extends Component {
       slidesToScroll: 1,
       speed: 200,
     }
-
     const {results, topRatedMovies, originals} = this.state
-    console.log(results)
+    // console.log(results)
     return (
       <div className="homeMainContainer">
         <div className="corCont">
@@ -90,12 +90,14 @@ class Home extends Component {
           <h1 className="Contentheadings">Trending</h1>
           <Slider className="treningCorosol" {...trending}>
             {topRatedMovies.map(each => (
-              <div key={each.id} className="trendingCorosolItem">
-                <img
-                  className="PosterImage"
-                  src={each.poster_path}
-                  alt="title"
-                />
+              <div key={each.id} id={each.id} className="trendingCorosolItem">
+                <Link to={`/movies-app/movies/${each.id}`}>
+                  <img
+                    className="PosterImage"
+                    src={each.poster_path}
+                    alt="title"
+                  />
+                </Link>
               </div>
             ))}
           </Slider>

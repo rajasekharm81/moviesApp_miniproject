@@ -1,4 +1,29 @@
 @media screen and (min-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    width: 9px;
+    background-color: rgb(21, 21, 21);
+  }
+  ::-webkit-scrollbar-track:hover {
+    width: 14px;
+  }
+
+  ::-webkit-scrollbar:hover {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #353434;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    width: 5px;
+    background-color: grey;
+  }
+
   .homeMainContainer {
     background-color: #131313;
     height: auto;
