@@ -1,0 +1,144 @@
+li {
+  list-style: none;
+}
+
+@media screen and (min-width: 600px) {
+  .movieDetailsMainContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    height: 80vh;
+    background-size: cover;
+  }
+
+  .movieDetailDescriptionContainer {
+    color: white;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    height: 30vh;
+    background-color: black;
+    width: 100vw;
+    box-shadow: 0px 0px 444px 0px #757373;
+  }
+
+  .playButton {
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .mainMovieDescriptionContainer {
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+    width: 40vw;
+  }
+  .movieDescriptionHeading {
+    font-size: 48px;
+  }
+
+  .similarMoviesContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 10vw;
+    background-color: black;
+  }
+
+  .SimilarMoviesDisplayContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .similarMovieImage {
+    height: 40vh;
+    width: 20vw;
+    padding: 1vw;
+    border-radius: 15px;
+  }
+
+  .adult {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  p {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+
+  li {
+    font-size: 12px;
+  }
+  .movieDetailsMainContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    height: 40vh;
+    background-size: cover;
+  }
+
+  .movieDetailDescriptionContainer {
+    color: white;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    height: 20vh;
+    background-color: black;
+    width: 100vw;
+  }
+
+  .playButton {
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .mainMovieDescriptionContainer {
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+    width: 60vw;
+  }
+  .movieDescriptionHeading {
+    font-size: 28px;
+  }
+
+  .similarMoviesContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 10vw;
+    background-color: black;
+  }
+
+  .SimilarMoviesDisplayContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .similarMovieImage {
+    height: 10vh;
+    width: 20vw;
+    padding: 1vw;
+    border-radius: 15px;
+  }
+
+  .adult {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}

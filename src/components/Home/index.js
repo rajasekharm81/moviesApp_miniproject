@@ -77,10 +77,6 @@ class Home extends Component {
                   }}
                 >
                   <Header />
-                  {/* <div>
-                    <h1 className="title">{each.title}</h1>
-                    <p>{each.overview}</p>
-                  </div> */}
                 </div>
               </div>
             ))}
@@ -105,11 +101,13 @@ class Home extends Component {
           <Slider className="treningCorosol" {...trending}>
             {originals.map(each => (
               <div key={each.id} className="trendingCorosolItem">
-                <img
-                  className="PosterImage"
-                  src={each.poster_path}
-                  alt="title"
-                />
+                <Link to={`/movies-app/movies/${each.id}`}>
+                  <img
+                    className="PosterImage"
+                    src={each.poster_path}
+                    alt="title"
+                  />
+                </Link>
               </div>
             ))}
           </Slider>

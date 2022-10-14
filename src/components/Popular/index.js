@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import './index.css'
 
 import Cookies from 'js-cookie'
@@ -35,11 +36,13 @@ class Popular extends Component {
         <div className="moviesContainer">
           {results.map(each => (
             <div key={each.id} className="movie">
-              <img
-                className="movieImage"
-                alt={each.title}
-                src={each.poster_path}
-              />
+              <Link to={`/movies-app/movies/${each.id}`}>
+                <img
+                  className="movieImage"
+                  alt={each.title}
+                  src={each.poster_path}
+                />
+              </Link>
             </div>
           ))}
         </div>

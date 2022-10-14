@@ -1,3 +1,8 @@
+.link {
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (min-width: 600px) {
   .headerContainer {
     width: 100%;
@@ -8,7 +13,7 @@
     align-items: center;
     color: white;
     margin-bottom: 4vh;
-    margin: 10px;
+    margin-top: 10px;
   }
 
   .hambergerIcon {
@@ -18,6 +23,7 @@
   .headerLogo {
     height: 10vh;
     width: 10vw;
+    padding-left: 2vw;
   }
 
   .headerLogoContainer {
