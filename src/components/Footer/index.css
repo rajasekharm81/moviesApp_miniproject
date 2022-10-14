@@ -9,6 +9,20 @@
   margin-bottom: 40px;
 }
 
-.icons {
-  font-size: 32px;
+@media screen and (min-width: 600px) {
+  .icons {
+    padding-top: 2vh;
+    font-size: 2vw;
+  }
+  .contactUs {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 599px) {
+  .icons {
+    font-size: 5vw;
+  }
+  .contactUs {
+    font-size: 3vw;
+  }
 }

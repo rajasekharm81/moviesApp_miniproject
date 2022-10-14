@@ -10,12 +10,12 @@ import {
 const Footer = () => (
   <div className="FooterContainer">
     <div className="icons">
-      <AiOutlineGoogle />
-      <AiOutlineTwitter />
-      <AiOutlineInstagram />
-      <AiFillYoutube />
+      <AiOutlineGoogle className="icon" />
+      <AiOutlineTwitter className="icon" />
+      <AiOutlineInstagram className="icon" />
+      <AiFillYoutube className="icon" />
     </div>
-    <h3>Contact Us</h3>
+    <h3 className="contactUs">Contact Us</h3>
   </div>
 )
 export default Footer

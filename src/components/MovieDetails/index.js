@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import {format} from 'date-fns'
 import Header from '../Header'
+import Footer from '../Footer'
 import FileNotFound from '../FileNotFound'
 import FailureView from '../FailureView'
 
@@ -104,7 +105,7 @@ class MovieDetails extends Component {
         >
           <Header className="header" />
           <div className="mainMovieDescriptionContainer">
-            <h1 className="movieDescriptionHeading">{data.title}</h1>
+            <h1>{data.title}</h1>
             <p>
               {duriation} {adult} {releaseYear}
             </p>
@@ -116,34 +117,34 @@ class MovieDetails extends Component {
         </div>
         <div className="movieDetailDescriptionContainer">
           <ul>
-            <h1>Genres</h1>
+            <h2>Genres</h2>
             {genres.map(each => (
               <li id={each.id}>{each.name}</li>
             ))}
           </ul>
           <ul>
-            <h1>Audio Available</h1>
+            <h2>Audio Available</h2>
             {audioAvailable.map(each => (
               <li id={each.id}>{each.english_name}</li>
             ))}
           </ul>
           <div>
             <div>
-              <h1>Rating Count</h1>
+              <h2>Rating Count</h2>
               <p>{data.vote_count}</p>
             </div>
             <div>
-              <h1>Rating Average</h1>
+              <h2>Rating Average</h2>
               <p>{data.vote_average}</p>
             </div>
           </div>
           <div>
             <div>
-              <h1>Budget</h1>
+              <h2>Budget</h2>
               <p>{data.budget}</p>
             </div>
             <div>
-              <h1>Release Date</h1>
+              <h2>Release Date</h2>
               <p>{rel}</p>
             </div>
           </div>
@@ -164,6 +165,7 @@ class MovieDetails extends Component {
               </Link>
             ))}
           </div>
+          <Footer />
         </div>
       </>
     )

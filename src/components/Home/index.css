@@ -38,7 +38,7 @@
     flex-direction: column;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 40vw;
     color: white;
   }
 
@@ -66,8 +66,8 @@
 
   .trendingCorosolItem {
     text-align: center;
-    height: 40vh;
-    width: 10vw;
+    height: 30vw;
+    width: 30vw;
   }
 
   .PosterImage {
@@ -85,7 +85,7 @@
 @media screen and (max-width: 599px) {
   .homeMainContainer {
     background-color: #131313;
-    height: auto;
+    height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;

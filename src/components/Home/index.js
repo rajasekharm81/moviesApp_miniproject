@@ -67,6 +67,7 @@ class Home extends Component {
       speed: 200,
       autoplaySpeed: 2000,
       cssEase: 'linear',
+      arrows: false,
     }
     const trending = {
       dots: false,
