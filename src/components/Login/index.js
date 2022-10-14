@@ -1,5 +1,5 @@
 import {Component} from 'react'
-
+import {Redirect} from 'react-router-dom'
 import './index.css'
 
 import Cookies from 'js-cookie'
@@ -27,6 +27,7 @@ class Login extends Component {
   }
 
   submitLogin = async event => {
+    const {history} = this.props
     event.preventDefault()
     const {username, password} = this.state
     const apiUrl = 'https://apis.ccbp.in/login'
@@ -42,6 +43,7 @@ class Login extends Component {
     if (response.ok) {
       this.setState({errorMsg: ''})
       Cookies.set('jwtToken', data.jwt_token, {expires: 30})
+      history.replace('/')
     } else {
       this.setState({errorMsg: data.error_msg})
     }
@@ -53,6 +55,12 @@ class Login extends Component {
     const passInputType = showPassword ? 'text' : 'password'
     const errormsg =
       errorMsg !== '' ? <p className="errorMsg">{errorMsg}</p> : null
+
+    const jwtToken = Cookies.get('jwtToken')
+
+    if (jwtToken !== undefined) {
+      return <Redirect path="/" />
+    }
     return (
       <div className="LoginMainContainer">
         {/* <h1 className="LoginMoviesHeading">Movies</h1> */}

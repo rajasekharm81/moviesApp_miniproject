@@ -41,6 +41,7 @@
     border-radius: 10px;
     border: none;
     width: 9vw;
+    font-size: 1.5vw;
   }
 
   .mainMovieDescriptionContainer {
@@ -92,7 +93,7 @@
   }
 
   li {
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     list-style: none;
   }
   .movieDetailsMainContainer {

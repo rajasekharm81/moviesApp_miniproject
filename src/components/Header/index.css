@@ -75,6 +75,45 @@
   .lg {
     font-size: 1vw;
   }
+  .dropdownButton {
+    background-color: transparent;
+    border: none;
+  }
+  .avatarImageContainer {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdownContent {
+    color: black;
+    background-color: #282626;
+    display: none;
+    position: absolute;
+    top: 6vh;
+    padding-left: 12px;
+    width: 15vw;
+    height: 20vh;
+    box-shadow: 0px 0px 16px 1px #252525c9;
+    z-index: 1;
+    border-radius: 15px;
+  }
+  .dropdown-content link {
+    color: black;
+    padding: 6px;
+    text-decoration: none;
+    display: block;
+    font-size: 2vh;
+    background-color: silver;
+  }
+  .avatarImageContainer:hover .dropdownContent {
+    display: block;
+  }
+  .dropdownContent p:hover {
+    font-size: larger;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 0.2vw;
+    box-shadow: 0px 0px 16px 1px #5c5b5bc9;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -110,7 +149,6 @@
     width: 40vw;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid blueviolet;
     padding-right: 3vw;
   }
 
@@ -127,7 +165,14 @@
   }
   .avatarImageContainer {
     display: none;
+    position: relative;
   }
+
+  .dropdownButton {
+    background-color: transparent;
+    border: none;
+  }
+
   .searchBarContainer {
     display: flex;
     flex-direction: row;
@@ -147,5 +192,29 @@
   }
   .searchInputEl:focus {
     outline: none;
+  }
+  .hambergerIcon {
+    padding-left: 2vw;
+    position: relative;
+  }
+  .hambergerDropdown {
+    background-color: #282626b8;
+    color: white;
+    padding: 5vw;
+    right: 0vw;
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+  }
+
+  .hambergerIcon:hover .hambergerDropdown {
+    display: block;
+  }
+
+  .logoutBtn {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 3vw;
   }
 }

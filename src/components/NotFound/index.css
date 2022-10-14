@@ -1,0 +1,29 @@
+.notFoundContainer {
+  background-image: url('https://res.cloudinary.com/dcqzidejd/image/upload/v1665728458/file-20220222-17-r2wgts_rmeojc.avif');
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  background-size: cover;
+  align-items: center;
+  height: 100vh;
+}
+
+.notFoundText {
+  font-size: 4vw;
+  color: white;
+  padding-top: 25vh;
+}
+.homeButon {
+  background-color: white;
+  width: 6vw;
+  border: none;
+  border-radius: 5px;
+  height: 2vw;
+  font-size: 0.9vw;
+  cursor: pointer;
+}
+
+.Text {
+  font-size: 2vw;
+  color: white;
+}
