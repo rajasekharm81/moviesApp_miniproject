@@ -3,48 +3,61 @@ import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import Slider from 'react-slick'
+import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
 import Footer from '../Footer'
+import FailureView from '../FailureView'
 
 import './index.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 class Home extends Component {
-  state = {results: [], topRatedMovies: [], originals: []}
+  state = {
+    results: [],
+    topRatedMovies: [],
+    originals: [],
+    status: 'INITIAL',
+  }
 
   componentDidMount() {
     this.movieDetails()
   }
 
   movieDetails = async () => {
+    this.setState({status: 'LOADING'})
     const apiUrl = 'https://apis.ccbp.in/movies-app/trending-movies'
     const jwtToken = Cookies.get('jwtToken')
     const options = {
       headers: {Authorization: `Bearer ${jwtToken}`},
     }
-    const response = await fetch(apiUrl, options)
-    const data = await response.json()
-    if (response.ok) {
-      this.setState({results: data.results})
-    }
+    try {
+      const response = await fetch(apiUrl, options)
+      const data = await response.json()
+      if (response.ok) {
+        this.setState({results: data.results})
+      }
 
-    const topRatedMoviesUrl = 'https://apis.ccbp.in/movies-app/top-rated-movies'
-    const topRatedMoviesresponse = await fetch(topRatedMoviesUrl, options)
-    const topRatedMoviesdata = await topRatedMoviesresponse.json()
-    if (topRatedMoviesresponse.ok) {
-      this.setState({topRatedMovies: topRatedMoviesdata.results})
-    }
-    const originalsUrl = 'https://apis.ccbp.in/movies-app/originals'
-    const originalsresponse = await fetch(originalsUrl, options)
-    const originalsdata = await originalsresponse.json()
-    if (originalsresponse.ok) {
-      this.setState({originals: originalsdata.results})
+      const topRatedMoviesUrl =
+        'https://apis.ccbp.in/movies-app/top-rated-movies'
+      const topRatedMoviesresponse = await fetch(topRatedMoviesUrl, options)
+      const topRatedMoviesdata = await topRatedMoviesresponse.json()
+      if (topRatedMoviesresponse.ok) {
+        this.setState({topRatedMovies: topRatedMoviesdata.results})
+      }
+      const originalsUrl = 'https://apis.ccbp.in/movies-app/originals'
+      const originalsresponse = await fetch(originalsUrl, options)
+      const originalsdata = await originalsresponse.json()
+      if (originalsresponse.ok) {
+        this.setState({originals: originalsdata.results, status: 'SUCCESS'})
+      }
+    } catch (e) {
+      this.setState({status: 'FAILED'})
     }
   }
 
-  render() {
+  renderContentView = () => {
     const posters = {
       dots: false,
       infinite: true,
@@ -52,7 +65,7 @@ class Home extends Component {
       slidesToScroll: 1,
       autoplay: true,
       speed: 200,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 2000,
       cssEase: 'linear',
     }
     const trending = {
@@ -115,6 +128,35 @@ class Home extends Component {
         </div>
       </div>
     )
+  }
+
+  renderLoadingView = () => (
+    <div className="loadingViewContainer">
+      <Loader type="TailSpin" color="red" />
+    </div>
+  )
+
+  renderInitialView = () => (
+    <div className="welcomeMsgContainer">
+      <h1>Welcome to Movies</h1>
+    </div>
+  )
+
+  render() {
+    const {status} = this.state
+
+    switch (status) {
+      case 'INITIAL':
+        return this.renderInitialView()
+      case 'SUCCESS':
+        return this.renderContentView()
+      case 'LOADING':
+        return this.renderLoadingView()
+      case 'FAILED':
+        return <FailureView path={this.movieDetails} />
+      default:
+        return null
+    }
   }
 }
 

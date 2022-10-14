@@ -103,6 +103,7 @@
 
   .corCont {
     box-shadow: 0px 0px 31px 1px #4f4f4f;
+    width: 100vw;
   }
 
   .title {
@@ -143,4 +144,21 @@
     align-self: flex-start;
     padding-left: 10%;
   }
+}
+
+.loadingViewContainer {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeMsgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  height: 100vh;
 }

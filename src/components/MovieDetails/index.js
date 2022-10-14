@@ -1,13 +1,18 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {Link} from 'react-router-dom'
+
+import Loader from 'react-loader-spinner'
 import {format} from 'date-fns'
 import Header from '../Header'
+import FileNotFound from '../FileNotFound'
+import FailureView from '../FailureView'
 
 import './index.css'
 
 class MovieDetails extends Component {
   state = {
+    status: 'INITIAL',
     data: [],
     genres: [],
     audioAvailable: [],
@@ -30,10 +35,7 @@ class MovieDetails extends Component {
   }
 
   getMovieDetails = async () => {
-    // const {match} = this.props
-    // const {params} = match
-    // const {id} = params
-
+    this.setState({status: 'LOADING'})
     const {updatedId} = this.state
     const jwtToken = Cookies.get('jwtToken')
     const apiUrl = `https://apis.ccbp.in/movies-app/movies/${updatedId}`
@@ -41,17 +43,24 @@ class MovieDetails extends Component {
       method: 'GET',
       headers: {Authorization: `Bearer ${jwtToken}`},
     }
-    const response = await fetch(apiUrl, options)
-    const data = await response.json()
-    if (response.ok) {
-      this.setState({
-        data: data.movie_details,
-        genres: data.movie_details.genres,
-        audioAvailable: data.movie_details.spoken_languages,
-        releaseDate: data.movie_details.release_date,
-        runTime: data.movie_details.runtime,
-        similarMovies: data.movie_details.similar_movies,
-      })
+    try {
+      const response = await fetch(apiUrl, options)
+      const data = await response.json()
+      if (response.ok) {
+        this.setState({
+          data: data.movie_details,
+          genres: data.movie_details.genres,
+          audioAvailable: data.movie_details.spoken_languages,
+          releaseDate: data.movie_details.release_date,
+          runTime: data.movie_details.runtime,
+          similarMovies: data.movie_details.similar_movies,
+          status: 'SUCCESS',
+        })
+      } else if (response.status === 400) {
+        this.setState({status: 'NOFILE'})
+      }
+    } catch {
+      this.setState({status: 'FAILED'})
     }
   }
 
@@ -70,7 +79,7 @@ class MovieDetails extends Component {
     })
   }
 
-  render() {
+  renderContentView = () => {
     const {
       data,
       genres,
@@ -87,7 +96,6 @@ class MovieDetails extends Component {
     ) : (
       <span className="adult">U/A</span>
     )
-    console.log(releaseYear)
     return (
       <>
         <div
@@ -159,6 +167,28 @@ class MovieDetails extends Component {
         </div>
       </>
     )
+  }
+
+  renderLoadingView = () => (
+    <div className="loadingViewContainer">
+      <Loader type="TailSpin" color="red" />
+    </div>
+  )
+
+  render() {
+    const {status} = this.state
+    switch (status) {
+      case 'LOADING':
+        return this.renderLoadingView()
+      case 'SUCCESS':
+        return this.renderContentView()
+      case 'FAILED':
+        return <FailureView path={this.getMovieDetails} />
+      case 'NOFILE':
+        return <FileNotFound />
+      default:
+        return null
+    }
   }
 }
 

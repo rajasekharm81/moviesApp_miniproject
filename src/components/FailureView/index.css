@@ -1,0 +1,30 @@
+.failureViewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  flex-direction: column;
+  color: white;
+}
+
+.failureImage {
+  height: 20vh;
+  width: 20vh;
+}
+
+@media screen and (max-width: 599px) {
+  .TryAgainButton {
+    width: 28vw;
+    padding: 1vh;
+    color: black;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .TryAgainButton {
+    width: 8vw;
+    padding: 1vh;
+    color: black;
+  }
+}

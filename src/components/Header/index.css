@@ -36,12 +36,13 @@
 
   .avatarContainer {
     display: flex;
-    width: 20vw;
+    width: 40vw;
     align-items: center;
+    padding-right: 2vw;
   }
 
   .magnifierIcon {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .avatarImage {
@@ -50,6 +51,26 @@
     background-color: white;
     margin-left: 5vh;
     border-radius: 500px;
+  }
+  .searchBarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20vw;
+  }
+  .searchInputEl {
+    padding: 1vh;
+    width: 15vw;
+    margin-right: 1vw;
+    border-radius: 2vw;
+    border: 1px solid white;
+    background-color: #3636365d;
+    color: white;
+    cursor: text;
+  }
+  .searchInputEl:focus {
+    outline: none;
   }
 }
 
@@ -83,13 +104,15 @@
 
   .avatarContainer {
     display: flex;
-    width: 20vw;
+    width: 40vw;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid blueviolet;
+    padding-right: 3vw;
   }
 
   .magnifierIcon {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .avatarImage {
@@ -101,5 +124,25 @@
   }
   .avatarImageContainer {
     display: none;
+  }
+  .searchBarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30vw;
+  }
+  .searchInputEl {
+    padding: 1vw;
+    width: 25vw;
+    margin-right: 1vw;
+    border-radius: 2vw;
+    border: 1px solid white;
+    background-color: #3636365d;
+    color: white;
+    cursor: text;
+  }
+  .searchInputEl:focus {
+    outline: none;
   }
 }

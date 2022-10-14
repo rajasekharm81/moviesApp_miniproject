@@ -15,6 +15,7 @@ li {
   .movieDetailDescriptionContainer {
     color: white;
     display: flex;
+    /* flex-wrap: wrap; */
     width: 80%;
     justify-content: space-around;
     height: 30vh;
@@ -91,6 +92,7 @@ li {
   .movieDetailDescriptionContainer {
     color: white;
     display: flex;
+    /* flex-wrap: wrap; */
     width: 80%;
     justify-content: space-around;
     height: 20vh;
@@ -141,4 +143,12 @@ li {
     padding: 5px;
     border-radius: 5px;
   }
+}
+
+.loadingViewContainer {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,47 @@
+@media screen and (max-width: 599px) {
+  .fileNotFoundContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://res.cloudinary.com/dcqzidejd/image/upload/v1665728843/DeadEnd_2006_wmqcsq.jpg');
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    flex-direction: column;
+  }
+  .homeButton {
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 2vw;
+    width: 18vw;
+    color: black;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .fileNotFoundContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('https://res.cloudinary.com/dcqzidejd/image/upload/v1665728458/file-20220222-17-r2wgts_rmeojc.avif');
+    height: 100vh;
+    background-size: cover;
+    color: white;
+  }
+  .homeButton {
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 1vw;
+    width: 8vw;
+    color: black;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+}
