@@ -73,8 +73,15 @@
     outline: none;
   }
   .lg {
-    font-size: 1vw;
+    font-size: 1.3vw;
+    margin-left: 0.7vw;
   }
+
+  .lg:hover {
+    color: blueviolet;
+    text-decoration: underline;
+  }
+
   .dropdownButton {
     background-color: transparent;
     border: none;

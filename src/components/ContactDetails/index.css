@@ -1,0 +1,22 @@
+.aboutMainContainer {
+  background-color: #181818;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactDetailsContainer {
+  color: white;
+}
+
+.ContactDetailslink {
+  color: green;
+  text-decoration: none;
+}
+
+.ContactDetailslink:hover {
+  color: yellow;
+  text-decoration: underline;
+}

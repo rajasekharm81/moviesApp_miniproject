@@ -11,11 +11,11 @@
 
 @media screen and (min-width: 600px) {
   .icons {
-    padding-top: 2vh;
+    padding-top: 1vh;
     font-size: 2vw;
   }
   .contactUs {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 }
 @media screen and (max-width: 599px) {

@@ -49,6 +49,9 @@ class Header extends Component {
           <Link className="link" to="/popular">
             <h1 className="lg">Popular</h1>
           </Link>
+          <Link className="link" to="/about">
+            <h1 className="lg">About</h1>
+          </Link>
         </div>
         <div className="avatarContainer">
           <div className="searchBarContainer">
@@ -83,6 +86,9 @@ class Header extends Component {
               </Link>
               <Link className="link" to="/popular">
                 <h1>Popular</h1>
+              </Link>
+              <Link className="link" to="/about">
+                <h1>About</h1>
               </Link>
               <Link className="link" to="/login">
                 <h1 onClick={this.logOut}>Logout</h1>

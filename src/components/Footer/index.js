@@ -15,7 +15,6 @@ const Footer = () => (
       <AiOutlineInstagram className="icon" />
       <AiFillYoutube className="icon" />
     </div>
-    <h3 className="contactUs">Contact Us</h3>
   </div>
 )
 export default Footer
